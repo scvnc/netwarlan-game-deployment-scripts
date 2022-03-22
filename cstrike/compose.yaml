@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  cstrike:
+    image: ghcr.io/netwarlan/cs16-snowsk337
+    environment:
+      CS16_SERVER_HOSTNAME: "NETWAR SNOWSK337"
+      CS16_SERVER_RCONPW: "headshot"
+      CS16_SERVER_UPDATE_ON_START: "true"
+      CS16_SERVER_FASTDOWNLOAD_URL: "https://raw.githubusercontent.com/netwarlan/map-files/main/cstrike"
+    volumes:
+      - ./data:/app/cstrike
+    restart: "no"
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      vlan:
+        ipv4_address: 10.10.10.122
+
+networks:
+  vlan:
+    external: true

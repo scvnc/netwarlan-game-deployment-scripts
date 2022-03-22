@@ -1,0 +1,52 @@
+version: "3"
+
+services:
+  csgo-casual-1:
+    image: ghcr.io/netwarlan/csgo
+    environment:
+      CSGO_SERVER_PORT: 27015
+      CSGO_SERVER_MAXPLAYERS: 24
+      CSGO_SERVER_MAP: "de_nuke"
+      CSGO_SERVER_SVLAN: 1
+      CSGO_SERVER_HOSTNAME: "NETWAR CSGO - PUBLIC 1"
+      CSGO_SERVER_RCONPW: "headshot"
+      CSGO_SERVER_TICKRATE: "128"
+      CSGO_SERVER_UPDATE_ON_START: "true"
+      CSGO_SERVER_VALIDATE_ON_START: "false"
+      CSGO_SERVER_GAME_TYPE: 0
+      CSGO_SERVER_GAME_MODE: 0
+      CSGO_SERVER_MAPGROUP: "mg_active"
+      CSGO_SERVER_GOTV_ENABLE: 0
+    volumes:
+      - ./data:/app/csgo
+    restart: "no"
+    networks:
+      vlan:
+        ipv4_address: 10.10.10.120
+
+  csgo-casual-2:
+    image: ghcr.io/netwarlan/csgo
+    environment:
+      CSGO_SERVER_PORT: 27015
+      CSGO_SERVER_MAXPLAYERS: 24
+      CSGO_SERVER_MAP: "de_nuke"
+      CSGO_SERVER_SVLAN: 1
+      CSGO_SERVER_HOSTNAME: "NETWAR CSGO - PUBLIC 2"
+      CSGO_SERVER_RCONPW: "headshot"
+      CSGO_SERVER_TICKRATE: "128"
+      CSGO_SERVER_UPDATE_ON_START: "false"
+      CSGO_SERVER_VALIDATE_ON_START: "false"
+      CSGO_SERVER_GAME_TYPE: 0
+      CSGO_SERVER_GAME_MODE: 0
+      CSGO_SERVER_MAPGROUP: "mg_active"
+      CSGO_SERVER_GOTV_ENABLE: 0
+    volumes:
+      - ./data:/app/csgo
+    restart: "no"
+    networks:
+      vlan:
+        ipv4_address: 10.10.10.121
+
+networks:
+  vlan:
+    external: true

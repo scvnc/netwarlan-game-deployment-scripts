@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  gmod:
+    image: ghcr.io/netwarlan/garrysmod
+    volumes:
+      - ./data:/app/gmod
+    environment:
+      GMOD_SERVER_HOSTNAME: "NETWAR Prophunt?"
+      GMOD_SERVER_MAP: "ph_office"
+    restart: "no"
+    networks:
+      vlan:
+        ipv4_address: 10.10.10.123
+
+networks:
+  vlan:
+    external: true

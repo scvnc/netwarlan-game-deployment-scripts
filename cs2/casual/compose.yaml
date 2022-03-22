@@ -1,0 +1,56 @@
+version: "3"
+
+services:
+  cs2-casual-1:
+    image: ghcr.io/netwarlan/cs2
+    environment:
+      STEAMCMD_USER: ${STEAM_USERNAME}
+      STEAMCMD_PASSWORD: ${STEAM_PASSWORD}
+      STEAMCMD_AUTH_CODE: ${STEAM_GUARD_CODE}
+      CS2_SERVER_PORT: 27015
+      CS2_SERVER_MAXPLAYERS: 24
+      CS2_SERVER_MAP: "de_nuke"
+      CS2_SERVER_SVLAN: 1
+      CS2_SERVER_HOSTNAME: "NETWAR CS2 - PUBLIC 1"
+      CS2_SERVER_TICKRATE: "128"
+      CS2_SERVER_UPDATE_ON_START: "true"
+      CS2_SERVER_VALIDATE_ON_START: "false"
+      CS2_SERVER_GAME_TYPE: 0
+      CS2_SERVER_GAME_MODE: 0
+      CS2_SERVER_MAPGROUP: "mg_active"
+      CS2_SERVER_GOTV_ENABLE: 0
+    volumes:
+      - ./data:/app/cs2
+    restart: "no"
+    networks:
+      vlan:
+        ipv4_address: 10.10.10.131
+
+  cs2-casual-2:
+    image: ghcr.io/netwarlan/cs2
+    environment:
+      STEAMCMD_USER: ${STEAM_USERNAME}
+      STEAMCMD_PASSWORD: ${STEAM_PASSWORD}
+      STEAMCMD_AUTH_CODE: ${STEAM_GUARD_CODE}
+      CS2_SERVER_PORT: 27015
+      CS2_SERVER_MAXPLAYERS: 24
+      CS2_SERVER_MAP: "de_mirage"
+      CS2_SERVER_SVLAN: 1
+      CS2_SERVER_HOSTNAME: "NETWAR CS2 - PUBLIC 1"
+      CS2_SERVER_RCONPW: "headshot"
+      CS2_SERVER_UPDATE_ON_START: "true"
+      CS2_SERVER_VALIDATE_ON_START: "false"
+      CS2_SERVER_GAME_TYPE: 0
+      CS2_SERVER_GAME_MODE: 0
+      CS2_SERVER_MAPGROUP: "mg_active"
+      CS2_SERVER_GOTV_ENABLE: 0
+    volumes:
+      - ./data:/app/cs2
+    restart: "no"
+    networks:
+      vlan:
+        ipv4_address: 10.10.10.132
+
+networks:
+  vlan:
+    external: true

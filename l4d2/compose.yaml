@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  l4d2:
+    image: ghcr.io/netwarlan/l4d2
+    environment:
+      L4D2_SERVER_HOSTNAME: "NETWAR L4D2"
+      L4D2_SERVER_UPDATE_ON_START: "true"
+    volumes:
+      - ./data:/app/l4d2
+    restart: "no"
+    networks:
+      vlan:
+        ipv4_address: 10.10.10.128
+
+networks:
+  vlan:
+    external: true

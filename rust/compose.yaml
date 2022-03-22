@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  rust:
+    image: ghcr.io/netwarlan/rust
+    volumes:
+      - ./data:/app/rust
+    restart: "no"
+    environment:
+      RUST_SERVER_NAME: "NETWAR RUST"
+      RUST_SERVER_DESCRIPTION: "plz behave"
+      RUST_SERVER_SEED: "126346512"
+      RUST_SERVER_WORLDSIZE: "2000"
+      RUST_SERVER_WIPE_ALL: "true"
+    networks:
+      vlan:
+        ipv4_address: 10.10.10.127
+
+networks:
+  vlan:
+    external: true

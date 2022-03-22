@@ -1,0 +1,8 @@
+## Ingore game data
+data/
+
+## Ingore Streaming Service Web Directory
+live/html
+
+## Ignore .env files
+.env

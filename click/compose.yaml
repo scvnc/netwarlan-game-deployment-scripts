@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  click:
+    image: ghcr.io/netwarlan/clickmania
+    networks:
+      vlan:
+        ipv4_address: 10.10.10.161
+
+networks:
+  vlan:
+    external: true

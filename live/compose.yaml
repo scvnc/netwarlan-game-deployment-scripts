@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  rtmp:
+    image: ghcr.io/netwarlan/rtmp
+    volumes:
+      - ./html:/html
+    restart: "no"
+    networks:
+      vlan:
+        ipv4_address: 10.10.10.160
+
+networks:
+  vlan:
+    external: true

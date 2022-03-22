@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+  csgo:
+    image: ghcr.io/netwarlan/csgo
+    environment:
+      CSGO_SERVER_PORT: 27015
+      CSGO_SERVER_MAXPLAYERS: 12
+      CSGO_SERVER_MAP: "de_nuke"
+      CSGO_SERVER_SVLAN: 1
+      CSGO_SERVER_HOSTNAME: "NETWAR CSGO - MATCH $MATCH"
+      CSGO_SERVER_RCONPW: "headshot"
+      CSGO_SERVER_TICKRATE: "128"
+      CSGO_SERVER_UPDATE_ON_START: "false"
+      CSGO_SERVER_VALIDATE_ON_START: "false"
+      CSGO_SERVER_GAME_TYPE: 0
+      CSGO_SERVER_GAME_MODE: 1
+      CSGO_SERVER_MAPGROUP: "mg_active"
+      CSGO_SERVER_ENABLE_REMOTE_CFG: "true"
+      CSGO_SERVER_REMOTE_CFG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/csgo/csgo_5v5_competitive.cfg"
+      CSGO_SERVER_GOTV_ENABLE: $GOTV_ENABLE
+    volumes:
+      - ./data:/app/csgo
+    restart: "no"
+    networks:
+      vlan:
+        ipv4_address: $IP
+
+networks:
+  vlan:
+    external: true

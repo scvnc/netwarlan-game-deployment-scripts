@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  minecraft:
+    image: itzg/minecraft-server
+    ports:
+      - 25565:25565/tcp
+      - 19132:19132/udp
+    environment:
+      EULA: "TRUE"
+      TYPE: "PAPER"
+      MEMORY: 6G
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
+    networks:
+      vlan:
+        ipv4_address: 10.10.10.130
+
+networks:
+  vlan:
+    external: true
