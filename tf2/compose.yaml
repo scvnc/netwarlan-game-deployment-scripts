@@ -9,7 +9,11 @@ services:
       TF2_SERVER_MAP: "cp_well"
     volumes:
       - ./data:/app/tf2
-    restart: "no"
+    restart: "unless-stopped"
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
     networks:
       vlan:
         ipv4_address: 10.10.10.124
@@ -23,7 +27,11 @@ services:
       TF2_SERVER_MAXPLAYERS: "32"
     volumes:
       - ./data:/app/tf2
-    restart: "no"
+    restart: "unless-stopped"
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
     networks:
       vlan:
         ipv4_address: 10.10.10.125

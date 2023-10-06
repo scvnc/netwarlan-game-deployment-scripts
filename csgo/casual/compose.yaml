@@ -19,7 +19,11 @@ services:
       CSGO_SERVER_GOTV_ENABLE: 0
     volumes:
       - ./data:/app/csgo
-    restart: "no"
+    restart: "unless-stopped"
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
     networks:
       vlan:
         ipv4_address: 10.10.10.120
@@ -42,7 +46,11 @@ services:
       CSGO_SERVER_GOTV_ENABLE: 0
     volumes:
       - ./data:/app/csgo
-    restart: "no"
+    restart: "unless-stopped"
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
     networks:
       vlan:
         ipv4_address: 10.10.10.121

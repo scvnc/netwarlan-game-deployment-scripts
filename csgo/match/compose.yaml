@@ -21,7 +21,11 @@ services:
       CSGO_SERVER_GOTV_ENABLE: $GOTV_ENABLE
     volumes:
       - ./data:/app/csgo
-    restart: "no"
+    restart: "unless-stopped"
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
     networks:
       vlan:
         ipv4_address: $IP

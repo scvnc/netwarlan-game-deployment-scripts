@@ -8,7 +8,11 @@ services:
       L4D2_SERVER_UPDATE_ON_START: "true"
     volumes:
       - ./data:/app/l4d2
-    restart: "no"
+    restart: "unless-stopped"
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
     networks:
       vlan:
         ipv4_address: 10.10.10.128

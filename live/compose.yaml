@@ -5,7 +5,11 @@ services:
     image: ghcr.io/netwarlan/rtmp
     volumes:
       - ./html:/html
-    restart: "no"
+    restart: "unless-stopped"
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
     networks:
       vlan:
         ipv4_address: 10.10.10.160

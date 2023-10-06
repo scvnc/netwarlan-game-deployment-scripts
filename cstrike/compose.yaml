@@ -10,7 +10,7 @@ services:
       CS16_SERVER_FASTDOWNLOAD_URL: "https://raw.githubusercontent.com/netwarlan/map-files/main/cstrike"
     volumes:
       - ./data:/app/cstrike
-    restart: "no"
+    restart: "unless-stopped"
     logging:
       options:
         max-size: "10m"

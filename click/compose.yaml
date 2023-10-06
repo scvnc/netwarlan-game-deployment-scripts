@@ -3,6 +3,10 @@ version: "3"
 services:
   click:
     image: ghcr.io/netwarlan/clickmania
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
     networks:
       vlan:
         ipv4_address: 10.10.10.161
