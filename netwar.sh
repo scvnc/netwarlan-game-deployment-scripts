@@ -3,6 +3,7 @@
 shell=$(basename "$0")
 
 game_exec_list=(
+  'connect/connect.sh'
   'cs2/casual/cs2.sh'
   'csgo/casual/csgo.sh'
   'cstrike/cstrike.sh'

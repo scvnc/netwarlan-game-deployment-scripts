@@ -38,7 +38,7 @@ IP | Server
 10.10.10.126 | tf2 prop hunt
 10.10.10.127 | rust
 10.10.10.128 | l4d2
-10.10.10.129 | 
+10.10.10.129 | connect
 10.10.10.130 | minecraft
 10.10.10.131 | cs2 casual 1
 10.10.10.132 | cs2 casual 2

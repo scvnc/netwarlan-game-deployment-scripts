@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  connect:
+    image: ghcr.io/netwarlan/connect
+    restart: "unless-stopped"
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      vlan:
+        ipv4_address: 10.10.10.129
+
+networks:
+  vlan:
+    external: true
