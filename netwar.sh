@@ -26,7 +26,7 @@ function start() {
   do
     echo "Starting $game"
     cd $main_dir/$(dirname $game)
-     bash $(basename $game) $this_state
+    bash $(basename $game) $this_state
   done
 }
 
@@ -38,7 +38,7 @@ function stop() {
   do
     echo "Stopping $game"
     cd $main_dir/$(dirname $game)
-     bash $(basename $game) $this_state
+    bash $(basename $game) $this_state
   done
 }
 
