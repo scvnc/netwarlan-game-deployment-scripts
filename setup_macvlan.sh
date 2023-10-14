@@ -20,12 +20,12 @@ if [[ $state == 'gs01' ]]; then
     --subnet=10.10.10.0/24 \
     --ip-range=10.10.10.120/28 \
     --gateway=10.10.10.1 \
-    -o parent=ens192 vlan
+    -o parent=eno1 vlan
 
 elif [[ $state == 'gs02' ]]; then
   docker network create -d macvlan \
     --subnet=10.10.10.0/24 \
-    --ip-range=10.10.10.220/28 \
+    --ip-range=10.10.10.120/28 \
     --gateway=10.10.10.1 \
     -o parent=ens192 vlan
 

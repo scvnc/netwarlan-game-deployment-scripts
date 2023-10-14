@@ -27,8 +27,8 @@ restart | Executes `restart` against each service
 
 ### IP Address Assignments
 The following lists the game servers and their associated IPs:
-IP | Server
--- | ------
+IP | Server | DNS
+-- | ------ | ---
 10.10.10.120 | csgo casual 1
 10.10.10.121 | csgo casual 2
 10.10.10.122 | cstrike snowsk337
@@ -36,10 +36,10 @@ IP | Server
 10.10.10.124 | tf2 casual 1
 10.10.10.125 | tf2 mvm
 10.10.10.126 | tf2 prop hunt
-10.10.10.127 | rust
-10.10.10.128 | l4d2
-10.10.10.129 | connect
-10.10.10.130 | minecraft
+10.10.10.127 | rust | rust
+10.10.10.128 | l4d2 
+10.10.10.129 | connect | connect
+10.10.10.130 | minecraft | minecraft
 10.10.10.131 | cs2 casual 1
 10.10.10.132 | cs2 casual 2
 10.10.10.133 |
@@ -49,17 +49,17 @@ IP | Server
 10.10.10.137 |
 10.10.10.138 |
 10.10.10.139 |
-10.10.10.140 | csgo / cs2 match 1
-10.10.10.141 | csgo / cs2 match 2
-10.10.10.142 | csgo / cs2 match 3
-10.10.10.143 | csgo / cs2 match 4
-10.10.10.144 | csgo / cs2 match 5
-10.10.10.145 | csgo / cs2 match 6
-10.10.10.146 | csgo / cs2 match 7
-10.10.10.147 | csgo / cs2 match 8
-10.10.10.148 | csgo / cs2 match 9
-10.10.10.149 | csgo / cs2 match 10
-10.10.10.150 | csgo / cs2 match 11
-10.10.10.151 | csgo / cs2 match 12
+10.10.10.140 | csgo / cs2 match 1 | match1
+10.10.10.141 | csgo / cs2 match 2 | match2
+10.10.10.142 | csgo / cs2 match 3 | match3
+10.10.10.143 | csgo / cs2 match 4 | match4
+10.10.10.144 | csgo / cs2 match 5 | match5
+10.10.10.145 | csgo / cs2 match 6 | match6
+10.10.10.146 | csgo / cs2 match 7 | match7
+10.10.10.147 | csgo / cs2 match 8 | match8
+10.10.10.148 | csgo / cs2 match 9 | match9
+10.10.10.149 | csgo / cs2 match 10 | match10
+10.10.10.150 | csgo / cs2 match 11 | match11
+10.10.10.151 | csgo / cs2 match 12 | match12
 
 As we add more to this list, we'll keep this updated so it's easy to see at a high level view.

@@ -5,7 +5,7 @@ services:
     image: ghcr.io/netwarlan/l4d2
     environment:
       L4D2_SERVER_HOSTNAME: "NETWAR L4D2"
-      L4D2_SERVER_UPDATE_ON_START: "true"
+      L4D2_SERVER_UPDATE_ON_START: true
     volumes:
       - ./data:/app/l4d2
     restart: "unless-stopped"
