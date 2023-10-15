@@ -17,6 +17,8 @@ services:
       CSGO_SERVER_GAME_MODE: 0
       CSGO_SERVER_MAPGROUP: "mg_active"
       CSGO_SERVER_GOTV_ENABLE: 0
+      CSGO_SERVER_ENABLE_REMOTE_CFG: true
+      CSGO_SERVER_REMOTE_CFG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/csgo/csgo_5v5_casual.cfg"
     volumes:
       - ./data:/app/csgo
     restart: "unless-stopped"
@@ -44,6 +46,8 @@ services:
       CSGO_SERVER_GAME_MODE: 0
       CSGO_SERVER_MAPGROUP: "mg_active"
       CSGO_SERVER_GOTV_ENABLE: 0
+      CSGO_SERVER_ENABLE_REMOTE_CFG: true
+      CSGO_SERVER_REMOTE_CFG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/csgo/csgo_5v5_casual.cfg"
     volumes:
       - ./data:/app/csgo
     restart: "unless-stopped"
