@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  ut2004:
+    image: lacledeslan/gamesvr-ut2004
+    command: "./ucc-bin server DM-Gael?game=XGame.xDeathMatch?AdminName=admin?AdminPassword=XXX -nohomedir -lanplay"
+    volumes:
+      - ./data/UT2004.ini:/app/System/UT2004.ini
+    restart: "unless-stopped"
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      vlan:
+        ipv4_address: 10.10.10.133
+
+networks:
+  vlan:
+    external: true
