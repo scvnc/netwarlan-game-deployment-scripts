@@ -5,8 +5,8 @@ services:
     image: ghcr.io/netwarlan/tf2
     environment:
       TF2_SERVER_HOSTNAME: "NETWAR TF2 - PROPHUNT"
-      TF2_SERVER_UPDATE_ON_START: "true"
-      TF2_SERVER_PROPHUNT: "true"
+      TF2_SERVER_UPDATE_ON_START: true
+      TF2_SERVER_PROPHUNT: true
       TF2_SERVER_MAP: "ph_hanger18_b7"
     volumes:
       - ./data:/app/tf2

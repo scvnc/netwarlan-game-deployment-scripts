@@ -13,12 +13,12 @@ services:
       CS2_SERVER_SVLAN: 1
       CS2_SERVER_HOSTNAME: "NETWAR CS2 - MATCH $MATCH"
       CS2_SERVER_RCONPW: "headshot"
-      CS2_SERVER_UPDATE_ON_START: true
+      CS2_SERVER_UPDATE_ON_START: false
       CS2_SERVER_VALIDATE_ON_START: false
       CS2_SERVER_GAME_TYPE: 0
       CS2_SERVER_GAME_MODE: 1
       CS2_SERVER_MAPGROUP: "mg_active"
-      CS2_SERVER_ENABLE_REMOTE_CFG: "true"
+      CS2_SERVER_ENABLE_REMOTE_CFG: true
       CS2_SERVER_REMOTE_CFG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/cs2/5v5_competitive.cfg"
       CS2_SERVER_GOTV_ENABLE: $GOTV_ENABLE
     volumes:

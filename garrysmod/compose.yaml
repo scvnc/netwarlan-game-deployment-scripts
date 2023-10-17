@@ -8,6 +8,7 @@ services:
     environment:
       GMOD_SERVER_HOSTNAME: "NETWAR Prophunt?"
       GMOD_SERVER_MAP: "ph_office"
+      GMOD_SERVER_UPDATE_ON_START: true
     restart: "unless-stopped"
     logging:
       options:
