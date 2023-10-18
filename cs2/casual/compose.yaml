@@ -19,6 +19,8 @@ services:
       CS2_SERVER_GAME_MODE: 0
       CS2_SERVER_MAPGROUP: "mg_active"
       CS2_SERVER_GOTV_ENABLE: 0
+      CS2_SERVER_ENABLE_REMOTE_CFG: true
+      CS2_SERVER_REMOTE_CFG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/cs2/casual.cfg"
     volumes:
       - ./data:/app/cs2
     restart: "unless-stopped"
@@ -48,6 +50,8 @@ services:
       CS2_SERVER_GAME_MODE: 0
       CS2_SERVER_MAPGROUP: "mg_active"
       CS2_SERVER_GOTV_ENABLE: 0
+      CS2_SERVER_ENABLE_REMOTE_CFG: true
+      CS2_SERVER_REMOTE_CFG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/cs2/casual.cfg"
     volumes:
       - ./data:/app/cs2
     restart: "unless-stopped"
