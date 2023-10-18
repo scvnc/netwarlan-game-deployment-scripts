@@ -13,6 +13,7 @@ game_exec_list=(
   'prophunt/tf2.sh'
   'rust/rust.sh'
   'tf2/tf2.sh'
+  'ut2004/ut2004.sh'
   )
 
 main_dir=$(pwd)
