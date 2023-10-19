@@ -13,7 +13,6 @@ services:
       RUST_SERVER_HEADER_IMAGE: "https://www.netwar.org/wp-content/uploads/2018/01/Netwar_Logo.png"
       RUST_SERVER_MAXPLAYERS: "75"
       RUST_SERVER_NAME: "NETWAR 42.0"
-      RUST_SERVER_NAME: "NETWAR RUST"
       RUST_SERVER_SEED: "321699587"
       RUST_SERVER_UPDATE_ON_START: true
       RUST_SERVER_URL: "https://www.netwar.org"
