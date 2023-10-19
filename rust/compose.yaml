@@ -24,8 +24,6 @@ services:
       RUST_UMOD_ENABLED: true
       RUST_UMOD_GATHER_MANAGER: true
       RUST_UMOD_GATHER_MANAGER_CONFIG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/rust/GatherManager.json"
-      RUST_UMOD_NO_WORKBENCHES: true
-      RUST_UMOD_NO_WORKBENCHES_CONFIG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/rust/NoWorkbench.json"
     logging:
       options:
         max-size: "10m"
