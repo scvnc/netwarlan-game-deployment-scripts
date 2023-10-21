@@ -1,7 +1,7 @@
 #!/bin/bash
 source .env
 
-command='changelevel de_dust2'
+command=$@
 
 ips=("10.10.10.140" 
      "10.10.10.141" 
