@@ -15,9 +15,10 @@ services:
       RUST_SERVER_NAME: "NETWAR 42.0"
       RUST_SERVER_SEED: "321699587"
       RUST_SERVER_UPDATE_ON_START: true
+      RUST_SERVER_VALIDATE_ON_START: false
       RUST_SERVER_URL: "https://www.netwar.org"
       RUST_SERVER_USERS_CONFIG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/rust/users.cfg"
-      RUST_SERVER_VALIDATE_ON_START: true
+      RUST_SERVER_CONFIG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/rust/server.cfg"
       RUST_SERVER_WIPE_ALL: false
       RUST_SERVER_WORLDSIZE: "3000"
       RUST_UMOD_BLUEPRINT_MANAGER: true
