@@ -4,14 +4,14 @@ mkdir -p html
 
 ## Function Declaration
 function start() {
-  docker-compose up -d --force-recreate
+  docker compose up -d --force-recreate
 
   wget -O html/index.html https://raw.githubusercontent.com/netwarlan/webplayer/master/index.html
-  docker-compose logs -f
+  docker compose logs -f
 }
 
 function stop() {
-  docker-compose down --remove-orphans
+  docker compose down --remove-orphans
 }
 
 function restart() {
@@ -29,7 +29,11 @@ function help() {
 }
 
 function update() {
-  docker-compose pull
+  docker compose pull
+}
+
+function logs() {
+  docker compose logs -f
 }
 
 ## Grab our argument
