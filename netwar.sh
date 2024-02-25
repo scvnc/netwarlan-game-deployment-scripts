@@ -9,7 +9,7 @@ game_exec_list=(
   'garrysmod/garrysmod.sh'
   'l4d2/l4d2.sh'
   'minecraft/minecraft.sh'
-  'prophunt/tf2.sh'
+  'palworld/palworld.sh'
   'rust/rust.sh'
   'tf2/tf2.sh'
   'ut2004/ut2004.sh'
