@@ -34,8 +34,8 @@ IP | Server | DNS
 10.10.10.122 | cstrike snowsk337
 10.10.10.123 | garrys mod prop hunt
 10.10.10.124 | tf2 casual 1
-10.10.10.125 | tf2 mvm
-10.10.10.126 | tf2 prop hunt
+10.10.10.125 | 
+10.10.10.126 | palworld
 10.10.10.127 | rust | rust
 10.10.10.128 | l4d2 
 10.10.10.129 | connect | connect

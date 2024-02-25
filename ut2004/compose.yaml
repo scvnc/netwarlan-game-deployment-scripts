@@ -5,7 +5,7 @@ services:
     image: lacledeslan/gamesvr-ut2004
     command: "./ucc-bin server DM-Gael?game=XGame.xDeathMatch?AdminName=admin?AdminPassword=XXX -nohomedir -lanplay"
     volumes:
-      - ./data/UT2004.ini:/app/System/UT2004.ini
+      - ./UT2004.ini:/app/System/UT2004.ini
     restart: "unless-stopped"
     logging:
       options:

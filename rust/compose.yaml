@@ -12,7 +12,7 @@ services:
       RUST_SERVER_DESCRIPTION: "NETWAR is a 501(c)(3) non-profit volunteer organization dedicated to hosting LAN parties"
       RUST_SERVER_HEADER_IMAGE: "https://www.netwar.org/wp-content/uploads/2018/01/Netwar_Logo.png"
       RUST_SERVER_MAXPLAYERS: "75"
-      RUST_SERVER_NAME: "NETWAR 42.0"
+      RUST_SERVER_NAME: "RUSTY NETWAR"
       RUST_SERVER_SEED: "321699587"
       RUST_SERVER_UPDATE_ON_START: true
       RUST_SERVER_VALIDATE_ON_START: false

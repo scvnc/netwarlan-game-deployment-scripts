@@ -20,24 +20,24 @@ services:
       vlan:
         ipv4_address: 10.10.10.124
 
-  tf2-casual-mvm:
-    image: ghcr.io/netwarlan/tf2
-    environment:
-      TF2_SERVER_HOSTNAME: "NETWAR TF2 - MvM"
-      TF2_SERVER_UPDATE_ON_START: true
-      TF2_SERVER_MAP: "mvm_ghost_town"
-      TF2_SERVER_ENABLE_REMOTE_CFG: true
-      TF2_SERVER_REMOTE_CFG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/tf2/tf2_casual.cfg"
-    volumes:
-      - ./data:/app/tf2
-    restart: "unless-stopped"
-    logging:
-      options:
-        max-size: "10m"
-        max-file: "3"
-    networks:
-      vlan:
-        ipv4_address: 10.10.10.125
+#  tf2-casual-mvm:
+#    image: ghcr.io/netwarlan/tf2
+#    environment:
+#      TF2_SERVER_HOSTNAME: "NETWAR TF2 - MvM"
+#      TF2_SERVER_UPDATE_ON_START: true
+#      TF2_SERVER_MAP: "mvm_ghost_town"
+#      TF2_SERVER_ENABLE_REMOTE_CFG: true
+#      TF2_SERVER_REMOTE_CFG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/tf2/tf2_casual.cfg"
+#    volumes:
+#      - ./data:/app/tf2
+#    restart: "unless-stopped"
+#    logging:
+#      options:
+#        max-size: "10m"
+#        max-file: "3"
+#    networks:
+#      vlan:
+#        ipv4_address: 10.10.10.125
 
 networks:
   vlan:

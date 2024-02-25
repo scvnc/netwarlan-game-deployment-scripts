@@ -3,7 +3,7 @@
 shell=$(basename "$0")
 
 ## How many instances to create?
-INSTANCE_COUNT=6
+INSTANCE_COUNT=8
 
 ## Function Declaration
 function start() {

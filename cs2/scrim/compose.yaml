@@ -1,27 +1,24 @@
 version: "3"
 
 services:
-  cs2-casual-1:
+  cs2-scrim-1:
     image: ghcr.io/netwarlan/cs2
     environment:
-      STEAMCMD_USER: ${STEAM_USERNAME}
-      STEAMCMD_PASSWORD: ${STEAM_PASSWORD}
-      STEAMCMD_AUTH_CODE: ${STEAM_GUARD_CODE}
       CS2_SERVER_PORT: 27015
       CS2_SERVER_MAXPLAYERS: 24
       CS2_SERVER_MAP: "de_nuke"
       CS2_SERVER_SVLAN: 1
-      CS2_SERVER_HOSTNAME: "NETWAR CS2 - CASUAL"
+      CS2_SERVER_HOSTNAME: "NETWAR CS2 - SCRIM 1"
       CS2_SERVER_UPDATE_ON_START: true
       CS2_SERVER_VALIDATE_ON_START: false
       CS2_SERVER_RCONPW: "headshot"
       CS2_SERVER_GAME_MODE_CONFIG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/cs2/gamemodes_server.txt"
       CS2_SERVER_GAME_TYPE: 0
-      CS2_SERVER_GAME_MODE: 0
-      CS2_SERVER_MAPGROUP: "nw_casual"
+      CS2_SERVER_GAME_MODE: 1
+      CS2_SERVER_MAPGROUP: "nw_competitive"
       CS2_SERVER_GOTV_ENABLE: 0
       CS2_SERVER_ENABLE_REMOTE_CFG: true
-      CS2_SERVER_REMOTE_CFG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/cs2/casual.cfg"
+      CS2_SERVER_REMOTE_CFG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/cs2/5v5_competitive.cfg"
     volumes:
       - ./data:/app/cs2
     restart: "unless-stopped"
@@ -31,29 +28,26 @@ services:
         max-file: "3"
     networks:
       vlan:
-        ipv4_address: 10.10.10.131
+        ipv4_address: 10.10.10.136
 
-  cs2-armsrace-1:
+  cs2-scrim-2:
     image: ghcr.io/netwarlan/cs2
     environment:
-      STEAMCMD_USER: ${STEAM_USERNAME}
-      STEAMCMD_PASSWORD: ${STEAM_PASSWORD}
-      STEAMCMD_AUTH_CODE: ${STEAM_GUARD_CODE}
       CS2_SERVER_PORT: 27015
       CS2_SERVER_MAXPLAYERS: 24
-      CS2_SERVER_MAP: "ar_shoots"
+      CS2_SERVER_MAP: "de_inferno"
       CS2_SERVER_SVLAN: 1
-      CS2_SERVER_HOSTNAME: "NETWAR CS2 - ARMS RACE"
+      CS2_SERVER_HOSTNAME: "NETWAR CS2 - SCRIM 2"
       CS2_SERVER_RCONPW: "headshot"
       CS2_SERVER_UPDATE_ON_START: false
       CS2_SERVER_VALIDATE_ON_START: false
       CS2_SERVER_GAME_MODE_CONFIG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/cs2/gamemodes_server.txt"
-      CS2_SERVER_GAME_TYPE: 1
-      CS2_SERVER_GAME_MODE: 0
+      CS2_SERVER_GAME_TYPE: 0
+      CS2_SERVER_GAME_MODE: 1
       CS2_SERVER_MAPGROUP: "nw_armsrace"
       CS2_SERVER_GOTV_ENABLE: 0
       CS2_SERVER_ENABLE_REMOTE_CFG: true
-      CS2_SERVER_REMOTE_CFG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/cs2/armsrace.cfg"
+      CS2_SERVER_REMOTE_CFG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/cs2/5v5_competitive.cfg"
     volumes:
       - ./data:/app/cs2
     restart: "unless-stopped"
@@ -63,7 +57,7 @@ services:
         max-file: "3"
     networks:
       vlan:
-        ipv4_address: 10.10.10.132
+        ipv4_address: 10.10.10.137
 
 networks:
   vlan:

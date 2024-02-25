@@ -1,12 +1,11 @@
 #!/bin/bash
 
-mkdir -p html
+shell=$(basename "$0")
 
 ## Function Declaration
 function start() {
+  mkdir -p data
   docker compose up -d --force-recreate
-
-  wget -O html/index.html https://raw.githubusercontent.com/netwarlan/webplayer/master/index.html
   docker compose logs -f
 }
 
@@ -20,12 +19,12 @@ function restart() {
 
 function help() {
   echo "Commands should look like:"
-  echo "  live.sh up       Start the server"
-  echo "  live.sh down     Stop the server"
-  echo "  live.sh restart  Restart the server"
-  echo "  live.sh logs     Outputs docker STD log"
-  echo "  live.sh update   Pull new docker image"
-  echo "  live.sh help     Show this help page"
+  echo "  $shell up       Start the server"
+  echo "  $shell down     Stop the server"
+  echo "  $shell restart  Restart the server"
+  echo "  $shell logs     Outputs docker STD log"
+  echo "  $shell update   Pull new docker image"
+  echo "  $shell help     Show this help page"
 }
 
 function update() {
