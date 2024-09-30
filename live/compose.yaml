@@ -1,5 +1,3 @@
-version: "3"
-
 services:
   rtmp:
     image: ghcr.io/netwarlan/rtmp

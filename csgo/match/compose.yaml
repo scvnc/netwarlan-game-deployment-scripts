@@ -1,5 +1,3 @@
-version: "3"
-
 services:
   csgo:
     image: ghcr.io/netwarlan/csgo

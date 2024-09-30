@@ -1,5 +1,3 @@
-version: "3"
-
 services:
   click:
     image: ghcr.io/netwarlan/clickmania

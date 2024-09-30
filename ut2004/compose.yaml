@@ -1,5 +1,3 @@
-version: "3"
-
 services:
   ut2004:
     image: lacledeslan/gamesvr-ut2004

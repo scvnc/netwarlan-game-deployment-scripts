@@ -1,5 +1,3 @@
-version: "3"
-
 services:
   cs2-casual-1:
     image: ghcr.io/netwarlan/cs2
