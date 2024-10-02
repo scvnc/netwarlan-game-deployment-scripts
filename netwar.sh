@@ -11,6 +11,7 @@ game_exec_list=(
   'minecraft/minecraft.sh'
   'palworld/palworld.sh'
   'rust/rust.sh'
+  'satisfactory/satisfactory.sh'
   'tf2/tf2.sh'
   'ut2004/ut2004.sh'
   )
