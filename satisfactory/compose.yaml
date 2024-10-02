@@ -1,0 +1,19 @@
+services:
+  satisfactory:
+    image: ghcr.io/netwarlan/satisfactory
+    environment:
+      SATISFACTORY_SERVER_UPDATE_ON_START: true
+    volumes:
+      - ./data:/app/satisfactory
+    restart: "unless-stopped"
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      vlan:
+        ipv4_address: 10.10.10.134
+
+networks:
+  vlan:
+    external: true

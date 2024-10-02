@@ -8,6 +8,7 @@ INSTANCE_COUNT=6
 ## Function Declaration
 function start() {
   mkdir -p data
+  chmod 777 -R data
   chown sysoper:sysoper -R data
 
   for MATCH in $(eval echo {1..$INSTANCE_COUNT}); do

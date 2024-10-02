@@ -8,7 +8,7 @@ INSTANCE_COUNT=8
 ## Function Declaration
 function start() {
   mkdir -p data
-  chown 1000:1000 -R data
+  chmod 777 -R data
 
   for MATCH in $(eval echo {1..$INSTANCE_COUNT}); do
     docker compose --env-file .env --env-file ./matches/$MATCH.env --project-name "cs2_match_$MATCH" up -d --force-recreate

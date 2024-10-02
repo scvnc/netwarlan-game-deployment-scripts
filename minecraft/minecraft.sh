@@ -5,6 +5,7 @@ shell=$(basename "$0")
 ## Function Declaration
 function start() {
   mkdir -p data
+  chmod 777 -R data
   docker compose up -d --force-recreate
   docker compose logs -f
 }

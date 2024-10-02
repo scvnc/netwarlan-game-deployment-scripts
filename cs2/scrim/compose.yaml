@@ -16,7 +16,9 @@ services:
       CS2_SERVER_MAPGROUP: "nw_competitive"
       CS2_SERVER_GOTV_ENABLE: 0
       CS2_SERVER_ENABLE_REMOTE_CFG: true
-      CS2_SERVER_REMOTE_CFG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/cs2/5v5_competitive.cfg"
+      CS2_SERVER_REMOTE_CFG: "https://raw.githubusercontent.com/netwarlan/server-configs/refs/heads/cs2-dev/cs2/5v5_competitive.cfg"
+      CS2_SERVER_GOTV_BROADCAST: 1
+      CS2_SERVER_LOGS_DIRECTORY: "netwar-cs2-scrim-1"
     volumes:
       - ./data:/app/cs2
     restart: "unless-stopped"
@@ -45,7 +47,9 @@ services:
       CS2_SERVER_MAPGROUP: "nw_armsrace"
       CS2_SERVER_GOTV_ENABLE: 0
       CS2_SERVER_ENABLE_REMOTE_CFG: true
-      CS2_SERVER_REMOTE_CFG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/cs2/5v5_competitive.cfg"
+      CS2_SERVER_REMOTE_CFG: "https://raw.githubusercontent.com/netwarlan/server-configs/refs/heads/cs2-dev/cs2/5v5_competitive.cfg"
+      CS2_SERVER_GOTV_BROADCAST: 1
+      CS2_SERVER_LOGS_DIRECTORY: "netwar-cs2-scrim-2"
     volumes:
       - ./data:/app/cs2
     restart: "unless-stopped"
