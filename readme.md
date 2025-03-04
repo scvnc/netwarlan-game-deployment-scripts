@@ -29,21 +29,21 @@ restart | Executes `restart` against each service
 The following lists the game servers and their associated IPs:
 IP | Server | DNS
 -- | ------ | ---
-10.10.10.120 | csgo casual 1
-10.10.10.121 | csgo casual 2
-10.10.10.122 | cstrike snowsk337
-10.10.10.123 | garrys mod prop hunt
-10.10.10.124 | tf2 casual 1
-10.10.10.125 | 
-10.10.10.126 | palworld
+10.10.10.120 | cstrike snowsk337
+10.10.10.121 | garrys mod - prop hunt
+10.10.10.122 | tf2 casual 1
+10.10.10.123 | palworld
+10.10.10.124 | satisfactory
+10.10.10.125 | ut2004
+10.10.10.126 | l4d2
 10.10.10.127 | rust | rust
-10.10.10.128 | l4d2 
+10.10.10.128 | 
 10.10.10.129 | connect | connect
 10.10.10.130 | minecraft | minecraft
 10.10.10.131 | cs2 casual 1
 10.10.10.132 | cs2 casual 2
-10.10.10.133 | ut2004
-10.10.10.134 | satisfactory
+10.10.10.133 | 
+10.10.10.134 | 
 10.10.10.135 | 
 10.10.10.136 | cs2 scrim 1
 10.10.10.137 | cs2 scrim 2
@@ -62,5 +62,13 @@ IP | Server | DNS
 10.10.10.150 | csgo / cs2 match 10 | match10
 10.10.10.151 | csgo / cs2 match 11 | match11
 10.10.10.152 | csgo / cs2 match 12 | match12
+
+
+### CPU Pinning Assignments
+To help a bit with performance, we'll pin containers to specific core(s) and/or ranges. The following maps out those assignments:
+Core # | Container / Server | Notes
+------ | ------------------ | -----
+TODO
+
 
 As we add more to this list, we'll keep this updated so it's easy to see at a high level view.
