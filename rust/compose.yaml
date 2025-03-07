@@ -11,14 +11,14 @@ services:
       RUST_SERVER_HEADER_IMAGE: "https://www.netwar.org/wp-content/uploads/2018/01/Netwar_Logo.png"
       RUST_SERVER_MAXPLAYERS: "75"
       RUST_SERVER_NAME: "RUSTY NETWAR"
-      RUST_SERVER_SEED: "321699587"
+      RUST_SERVER_SEED: "88028464"
       RUST_SERVER_UPDATE_ON_START: true
       RUST_SERVER_VALIDATE_ON_START: false
       RUST_SERVER_URL: "https://www.netwar.org"
       RUST_SERVER_USERS_CONFIG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/rust/users.cfg"
       RUST_SERVER_CONFIG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/rust/server.cfg"
       RUST_SERVER_WIPE_ALL: false
-      RUST_SERVER_WORLDSIZE: "3000"
+      RUST_SERVER_WORLDSIZE: "3700"
       RUST_UMOD_BLUEPRINT_MANAGER: true
       RUST_UMOD_BLUEPRINT_MANAGER_CONFIG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/rust/BlueprintManager.json"
       RUST_UMOD_ENABLED: true
