@@ -21,7 +21,7 @@ services:
     image: ghcr.io/netwarlan/tf2
     environment:
       TF2_SERVER_HOSTNAME: "NETWAR TF2 - MvM"
-      TF2_SERVER_MAXPLAYERS: 32 ## Needs to be 32 for MvM to start
+      TF2_SERVER_MAXPLAYERS: 32
       TF2_SERVER_UPDATE_ON_START: false
       TF2_SERVER_MAP: "mvm_ghost_town"
       TF2_SERVER_REMOTE_CFG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/tf2/tf2_mvm.cfg"

@@ -32,7 +32,7 @@ IP | Server | DNS
 10.10.10.120 | cstrike snowsk337
 10.10.10.121 | garrys mod - prop hunt
 10.10.10.122 | tf2 casual 1
-10.10.10.123 | palworld
+10.10.10.123 | 
 10.10.10.124 | satisfactory
 10.10.10.125 | ut2004
 10.10.10.126 | l4d2
