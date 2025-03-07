@@ -1,12 +1,13 @@
 services:
   gmod:
-    image: ghcr.io/netwarlan/garrysmod
+    image: netwarlan/garrysmod
     volumes:
       - ./data:/app/gmod
     environment:
       GMOD_SERVER_HOSTNAME: "NETWAR Prophunt?"
       GMOD_SERVER_MAP: "ph_office"
       GMOD_SERVER_UPDATE_ON_START: true
+      GMOD_SERVER_REMOTE_CFG: "https://raw.githubusercontent.com/netwarlan/server-configs/refs/heads/main/garrysmod/prophunt.cfg"
     restart: "unless-stopped"
     logging:
       options:
