@@ -1,6 +1,6 @@
 services:
   gmod:
-    image: netwarlan/garrysmod
+    image: ghcr.io/netwarlan/garrysmod
     volumes:
       - ./data:/app/gmod
     environment:
