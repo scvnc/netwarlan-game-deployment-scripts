@@ -1,12 +1,18 @@
 services:
   rust:
-    image: ghcr.io/netwarlan/rust
+    build: .
     volumes:
       - ./data:/app/rust
     restart: "unless-stopped"
+    ports:
+      - 28015:28015/udp
+      - 28016:28016/udp
+      - 28016:28016/tcp
+      - 28082:28082/tcp
     environment:
       RUST_RCON_ENABLE: true
       RUST_RCON_PORT: "28016"
+      RUST_RCON_PASSWORD: doopage2025
       RUST_SERVER_DESCRIPTION: "NETWAR is a 501(c)(3) non-profit volunteer organization dedicated to hosting LAN parties"
       RUST_SERVER_HEADER_IMAGE: "https://www.netwar.org/wp-content/uploads/2018/01/Netwar_Logo.png"
       RUST_SERVER_MAXPLAYERS: "75"
@@ -15,23 +21,11 @@ services:
       RUST_SERVER_UPDATE_ON_START: true
       RUST_SERVER_VALIDATE_ON_START: false
       RUST_SERVER_URL: "https://www.netwar.org"
-      RUST_SERVER_USERS_CONFIG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/rust/users.cfg"
-      RUST_SERVER_CONFIG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/rust/server.cfg"
       RUST_SERVER_WIPE_ALL: false
       RUST_SERVER_WORLDSIZE: "3700"
-      RUST_UMOD_BLUEPRINT_MANAGER: true
-      RUST_UMOD_BLUEPRINT_MANAGER_CONFIG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/rust/BlueprintManager.json"
+      # manually manage mods
+      RUST_UMOD_BLUEPRINT_MANAGER: false
       RUST_UMOD_ENABLED: true
-      RUST_UMOD_GATHER_MANAGER: true
-      RUST_UMOD_GATHER_MANAGER_CONFIG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/rust/GatherManager.json"
-    logging:
-      options:
-        max-size: "10m"
-        max-file: "3"
-    networks:
-      vlan:
-        ipv4_address: 10.10.10.127
+      # manually manage mods
+      RUST_UMOD_GATHER_MANAGER: false 
 
-networks:
-  vlan:
-    external: true
