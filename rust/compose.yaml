@@ -4,11 +4,6 @@ services:
     volumes:
       - ./data:/app/rust
     restart: "unless-stopped"
-    ports:
-      - 28015:28015/udp
-      - 28016:28016/udp
-      - 28016:28016/tcp
-      - 28082:28082/tcp
     environment:
       RUST_RCON_ENABLE: true
       RUST_RCON_PORT: "28016"
@@ -23,8 +18,19 @@ services:
       RUST_SERVER_URL: "https://www.netwar.org"
       RUST_SERVER_WIPE_ALL: false
       RUST_SERVER_WORLDSIZE: "3700"
-      # manually manage mods
+      # Manage mods thru server-config copying
+      RUST_UMOD_GATHER_MANAGER: false
       RUST_UMOD_BLUEPRINT_MANAGER: false
       RUST_UMOD_ENABLED: true
-      # manually manage mods
-      RUST_UMOD_GATHER_MANAGER: false
+
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      vlan:
+        ipv4_address: 10.10.10.127
+
+networks:
+  vlan:
+    external: true
