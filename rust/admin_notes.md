@@ -4,6 +4,26 @@
 
 Very significantly, it seems like the mods can be configured and reloaded while the server is running.  This should aleviate a lot of server reboots.
 
+## The poormans way to bootstrap this fresh...
+
+  `./rust.sh start`
+
+watch the logs and wait for it to install oxide... then stop the server
+
+  `./rust.sh stop`
+
+While its off, load the saved mods/config by running
+
+   `./rust.sh loadconfig`
+
+and then you can start the server.
+
+Later, after you are done tweaking the server and want to save the configs.. you can save it with
+
+   `./rust.sh saveconfig`
+
+This will save relevant config files to a git clone of `netwarlan/server-configs`.
+From there, you can examine the diff and commit.
 
 ## Important Directories
 
