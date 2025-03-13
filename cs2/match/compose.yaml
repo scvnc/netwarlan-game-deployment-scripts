@@ -6,9 +6,9 @@ services:
       CS2_SERVER_MAXPLAYERS: 12
       CS2_SERVER_MAP: "de_mirage"
       CS2_SERVER_SVLAN: 1
-      CS2_SERVER_HOSTNAME: "NETWAR CS2 - MATCH $MATCH"
+      CS2_SERVER_HOSTNAME: "$HOSTNAME"
       CS2_SERVER_RCONPW: "headshot"
-      CS2_SERVER_UPDATE_ON_START: true
+      CS2_SERVER_UPDATE_ON_START: false
       CS2_SERVER_VALIDATE_ON_START: false
       CS2_SERVER_GAME_MODE_CONFIG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/cs2/gamemodes_server.txt"
       CS2_SERVER_GAME_TYPE: 0
@@ -18,7 +18,7 @@ services:
       CS2_SERVER_REMOTE_CFG: "https://raw.githubusercontent.com/netwarlan/server-configs/refs/heads/cs2-dev/cs2/5v5_competitive.cfg"
       CS2_SERVER_GOTV_ENABLE: $GOTV_ENABLE
       CS2_SERVER_GOTV_BROADCAST: 1
-      CS2_SERVER_LOGS_DIRECTORY: "netwar-cs2-match-$MATCH"
+      CS2_SERVER_LOGS_DIRECTORY: "netwar-cs2-$LOGS"
     volumes:
       - ./data:/app/cs2
     restart: "unless-stopped"
@@ -29,6 +29,7 @@ services:
     networks:
       vlan:
         ipv4_address: $IP
+    cpuset: $CPU
 
 networks:
   vlan:

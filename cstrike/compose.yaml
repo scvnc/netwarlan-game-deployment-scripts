@@ -4,7 +4,7 @@ services:
     environment:
       CS16_SERVER_HOSTNAME: "NETWAR SNOWSK337"
       CS16_SERVER_RCONPW: "headshot"
-      CS16_SERVER_UPDATE_ON_START: false
+      CS16_SERVER_UPDATE_ON_START: true
       CS16_SERVER_FASTDOWNLOAD_URL: "https://raw.githubusercontent.com/netwarlan/map-files/main/cstrike"
     volumes:
       - ./data:/app/cstrike
@@ -15,7 +15,8 @@ services:
         max-file: "3"
     networks:
       vlan:
-        ipv4_address: 10.10.10.122
+        ipv4_address: 10.10.10.120
+    cpuset: "0"
 
 networks:
   vlan:

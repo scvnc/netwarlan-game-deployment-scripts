@@ -3,23 +3,39 @@
 shell=$(basename "$0")
 
 ## How many instances to create?
-INSTANCE_COUNT=8
+PRO_INSTANCE_COUNT=1
+CASUAL_INSTANCE_COUNT=1
 
 ## Function Declaration
 function start() {
   mkdir -p data
   chmod 777 -R data
 
-  for MATCH in $(eval echo {1..$INSTANCE_COUNT}); do
-    docker compose --env-file ./matches/$MATCH.env --project-name "cs2_match_$MATCH" up -d --force-recreate
-  done
+  if [ "$PRO_INSTANCE_COUNT" -ne 0 ]; then
+    for PROMATCH in $(eval echo {1..$PRO_INSTANCE_COUNT}); do
+      docker compose --env-file ./matches-pro/$PROMATCH.env --project-name "cs2_match_pro_$PROMATCH" up -d --force-recreate
+    done
+  fi
 
+  if [ "$CASUAL_INSTANCE_COUNT" -ne 0 ]; then
+    for CASUALMATCH in $(eval echo {1..$CASUAL_INSTANCE_COUNT}); do
+      docker compose --env-file ./matches-casual/$CASUALMATCH.env --project-name "cs2_match_casual_$CASUALMATCH" up -d --force-recreate
+    done
+  fi
 }
 
 function stop() {
-  for MATCH in $(eval echo {1..$INSTANCE_COUNT}); do
-    docker compose --project-name "cs2_match_$MATCH" down
-  done
+  if [ "$PRO_INSTANCE_COUNT" -ne 0 ]; then
+    for PROMATCH in $(eval echo {1..$PRO_INSTANCE_COUNT}); do
+      docker compose --project-name "cs2_match_pro_$PROMATCH" down
+    done
+  fi
+
+  if [ "$CASUAL_INSTANCE_COUNT" -ne 0 ]; then
+    for CASUALMATCH in $(eval echo {1..$CASUAL_INSTANCE_COUNT}); do
+      docker compose --project-name "cs2_match_casual_$CASUALMATCH" down
+    done
+  fi
 }
 
 function restart() {

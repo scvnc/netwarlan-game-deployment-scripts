@@ -14,8 +14,9 @@ services:
         max-file: "3"
     networks:
       vlan:
-        ipv4_address: 10.10.10.134
-
+        ipv4_address: 10.10.10.124
+    cpuset: "5"
+    
 networks:
   vlan:
     external: true

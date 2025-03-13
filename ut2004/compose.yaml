@@ -12,6 +12,7 @@ services:
     networks:
       vlan:
         ipv4_address: 10.10.10.133
+    cpuset: "6"
 
 networks:
   vlan:

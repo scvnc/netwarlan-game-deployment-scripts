@@ -27,6 +27,7 @@ services:
     networks:
       vlan:
         ipv4_address: 10.10.10.131
+    cpuset: "14"
 
   cs2-armsrace-1:
     image: ghcr.io/netwarlan/cs2
@@ -56,6 +57,7 @@ services:
     networks:
       vlan:
         ipv4_address: 10.10.10.132
+    cpuset: "15"
 
 networks:
   vlan:

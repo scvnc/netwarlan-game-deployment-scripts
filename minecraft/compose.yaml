@@ -15,7 +15,8 @@ services:
     networks:
       vlan:
         ipv4_address: 10.10.10.130
-
+    cpuset: "12"
+    
 networks:
   vlan:
     external: true

@@ -15,7 +15,8 @@ services:
         max-file: "3"
     networks:
       vlan:
-        ipv4_address: 10.10.10.124
+        ipv4_address: 10.10.10.122
+    cpuset: "3"
 
   tf2-casual-mvm:
     image: ghcr.io/netwarlan/tf2
@@ -34,7 +35,8 @@ services:
         max-file: "3"
     networks:
       vlan:
-        ipv4_address: 10.10.10.125
+        ipv4_address: 10.10.10.123
+    cpuset: "4"
 
 networks:
   vlan:

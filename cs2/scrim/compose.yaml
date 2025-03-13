@@ -28,7 +28,8 @@ services:
         max-file: "3"
     networks:
       vlan:
-        ipv4_address: 10.10.10.136
+        ipv4_address: 10.10.10.133
+    cpuset: "16"
 
   cs2-scrim-2:
     image: ghcr.io/netwarlan/cs2
@@ -59,7 +60,8 @@ services:
         max-file: "3"
     networks:
       vlan:
-        ipv4_address: 10.10.10.137
+        ipv4_address: 10.10.10.134
+    cpuset: "17"
 
 networks:
   vlan:
