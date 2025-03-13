@@ -4,7 +4,11 @@
 
 Very significantly, it seems like the mods can be configured and reloaded while the server is running.  This should aleviate a lot of server reboots.
 
-## The poormans way to bootstrap this fresh...
+## What have I done?!  How make go??
+
+So I have partially modified the way mods/config are loaded for this server. This involves forks of `netwarlan/game-deployment-scripts` and `netwarlan/server-configs`.
+
+Begin by starting the server...
 
   `./rust.sh start`
 
