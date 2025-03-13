@@ -63,28 +63,37 @@ It seems like it is very easy to hotload mods.  It's observed when add/remove a 
 
 ### Installed Mods
 
+These are the mods I've played with while learning about this server.
+
 - [TruePvE][TruePvE]
 	- Allows one to set up PvE rules with particular zones of the map.
 	- note: [purge mode](https://umod.org/community/true-pve/24865-perfect-truepve-settings-with-option-for-purge)
-- [Dynamic PvP][Dynamic PvP]
+
+- [Dynamic PvP](https://umod.org/plugins/dynamic-pvp)
 	- Enables zones on the map that allow PvP.  Works alongside [TruePvE][TruePvE].
 	- PvP zones can be created around NPC events, like airdrops, destruction of patrol helicoptor, crate hacking, etc.
 	- Monuments config.
-- [ZoneDomes][ZoneDomes]
+
+- [ZoneDomes](https://umod.org/plugins/zone-domes)
 	- Creates a visual dome around zones so that players know they are entering.
 	- This may not be needed as Dynamic PvP already does this?
 	
 - [Rust Kits][Rust Kits]
 	- Grant players premade kits to add to their inventory.
 	- There can be a cooldown/purchase-costs to prevent abuse
+	- has an admin ui, need to grant admin to particular players
 
-- [GatherManager][GatherManager]
+- [GatherManager](https://umod.org/plugins/gather-manager)
 	- This mod can speed up resource gathering
-	- You can modify this during runtime!
+	- You can modify params at runtime with RCON!
+	- This does not manage loot tables for barrels.
 	- [Further reading](https://www.gameserverkings.com/knowledge-base/rust/modify-gather-rate/)
 
-- [BlueprintManager][BlueprintManager]
+- [BlueprintManager](https://umod.org/plugins/blueprint-manager)
 	- Brought over from prior netwar
+
+[TruePvE]: https://umod.org/plugins/true-pve
+[Rust Kits]:https://umod.org/plugins/rust-kits
 
 ### Mods to investigate
 
@@ -173,5 +182,4 @@ note: https://oxidemod.org/threads/what-can-we-put-in-the-serverauto-cfg-file.11
 - Need to set kit admins for the UI
 
 
-[TruePvE]: https://umod.org/plugins/true-pve
-[Rust Kits]:https://umod.org/plugins/rust-kits
+
