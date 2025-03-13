@@ -1,6 +1,6 @@
 services:
   rust:
-    build: .
+    build: ./docker-image
     volumes:
       - ./data:/app/rust
     restart: "unless-stopped"
@@ -27,5 +27,4 @@ services:
       RUST_UMOD_BLUEPRINT_MANAGER: false
       RUST_UMOD_ENABLED: true
       # manually manage mods
-      RUST_UMOD_GATHER_MANAGER: false 
-
+      RUST_UMOD_GATHER_MANAGER: false
