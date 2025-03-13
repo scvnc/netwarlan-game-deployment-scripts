@@ -4,8 +4,11 @@ shell=$(basename "$0")
 
 ## Function Declaration
 function start() {
-  mkdir -p data
-  chmod 777 -R data
+  mkdir -p server-bin
+  chmod 777 -R server-bin
+
+  mkdir -p server-data
+  chmod 777 -R server-data
   docker compose up -d --force-recreate
   docker compose logs -f
 }
