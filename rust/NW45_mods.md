@@ -100,7 +100,7 @@ We can see if the gather mod is working and check its params with
 
 ## Plants
 
-Perhaps at some point, increasing the rate at which plants grow would be useful.
+Perhaps at some point later during the lan, increasing the rate at which plants grow would be useful.
 I read adjusting the tick scale is a good idea to do this.  Example making it 2x:
 
     server.planttickscale 2
