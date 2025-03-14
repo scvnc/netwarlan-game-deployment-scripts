@@ -41,7 +41,7 @@ curl -sL https://umod.org/plugins/Kits.cs -o Kits.cs
 
 The server will detect the files, compile, and launch each mod while it is runnning.
 
-#### Create a PvE zone on the map
+### Create a PvE zone on the map
 
 Perhaps, after some exploring, we should find a nice place on the map where player and building damage is disabled.
 
