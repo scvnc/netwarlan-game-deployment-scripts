@@ -1,7 +1,19 @@
-If a command starts with a forward slash, then it is something you type in chat.
-Otherwise it should be typed in the game console F1 or rcon.
+## Fixing the docker image
 
-## Mods Guide
+When the container is restarted, it [erases all the mod config files](https://github.com/netwarlan/rust/blob/63de613c2dfb69405924e17b34d409dcf69ed2b8/run.sh#L107) inside `data/oxide/data` and `data/oxide/config`.
+
+If not fixed for netwar 45, we will have to take care to copy the files out of these folders and restore them.
+It gets complicated because the mod files alongisde the `data/oxide/data` folder seem to have some binary format for oxide config and could change if the oxide version is updated.
+
+Some options
+
+- Modify/build the rust docker image to not clean up the oxide folder.
+- A temporary fix may be have the deployment script build an image with a modified `run.sh`  .. I could make a PR.
+
+## Mods Guide/Notes
+
+If a command starts with a forward slash, then it is something you type in chat.
+Otherwise it should be typed in the game console (F1) or rcon.
 
 ### Add me as admin via rcon
 
