@@ -14,6 +14,8 @@ Some fix options
 
 ## Mods Guide/Notes
 
+All of this can be performed after the server is running. No need to modify any docker/deploy config.
+
 If a command starts with a forward slash, then it is something you type in chat.
 Otherwise it should be typed in the game console (F1) or rcon.
 
