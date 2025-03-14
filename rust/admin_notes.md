@@ -34,6 +34,7 @@ From there, you can examine the diff and commit.
 - `data/server/rust/cfg/*` - server config files
 - `data/oxide/plugins/*` - mods that will be loaded
 - `data/oxide/config/*` - each mod seemingly has a json config and they are saved here
+- `data/oxide/data/*` - some mods save their config in here, and its also where oxide stores its own config
 
 ## Remote console (RCON)
 

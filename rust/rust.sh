@@ -74,8 +74,8 @@ function saveconfig() {
   # ## ensure we are only copying over the exact set of plugins
   rm -r ${RUST_CONFIG_DIR}/oxide/plugins
 
-  # ## copy over oxide plugins
-  cp -r data/oxide/plugins data/oxide/config ${RUST_CONFIG_DIR}/oxide
+  # ## copy over oxide (mods) plugins and config
+  cp -r data/oxide/plugins data/oxide/config data/oxide/data ${RUST_CONFIG_DIR}/oxide
 
   # # save the rust server config
   cp data/server/${RUST_SERVER_IDENTITY}/cfg/* ${RUST_CONFIG_DIR}/server/${RUST_SERVER_IDENTITY}/cfg/
