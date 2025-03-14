@@ -7,7 +7,7 @@ services:
       CS2_SERVER_MAP: "de_nuke"
       CS2_SERVER_SVLAN: 1
       CS2_SERVER_HOSTNAME: "NETWAR CS2 - CASUAL"
-      CS2_SERVER_UPDATE_ON_START: true
+      CS2_SERVER_UPDATE_ON_START: false
       CS2_SERVER_VALIDATE_ON_START: false
       CS2_SERVER_RCONPW: "headshot"
       CS2_SERVER_GAME_MODE_CONFIG: "https://raw.githubusercontent.com/netwarlan/server-configs/main/cs2/gamemodes_server.txt"
@@ -27,6 +27,7 @@ services:
     networks:
       vlan:
         ipv4_address: 10.10.10.131
+    cpuset: "14"
 
   cs2-armsrace-1:
     image: ghcr.io/netwarlan/cs2
@@ -56,6 +57,7 @@ services:
     networks:
       vlan:
         ipv4_address: 10.10.10.132
+    cpuset: "15"
 
 networks:
   vlan:

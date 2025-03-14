@@ -31,8 +31,8 @@ IP | Server | DNS
 -- | ------ | ---
 10.10.10.120 | cstrike snowsk337
 10.10.10.121 | garrys mod - prop hunt
-10.10.10.122 | tf2 casual 1
-10.10.10.123 | 
+10.10.10.122 | tf2 casual
+10.10.10.123 | tf2 mvm
 10.10.10.124 | satisfactory
 10.10.10.125 | ut2004
 10.10.10.126 | l4d2
@@ -42,33 +42,69 @@ IP | Server | DNS
 10.10.10.130 | minecraft | minecraft
 10.10.10.131 | cs2 casual 1
 10.10.10.132 | cs2 casual 2
-10.10.10.133 | 
-10.10.10.134 | 
+10.10.10.133 | cs2 scrim 1
+10.10.10.134 | cs2 scrim 2
 10.10.10.135 | 
-10.10.10.136 | cs2 scrim 1
-10.10.10.137 | cs2 scrim 2
+10.10.10.136 |
+10.10.10.137 |
 10.10.10.138 | 
 10.10.10.139 | 
 10.10.10.140 | 
-10.10.10.141 | csgo / cs2 match 1 | match1
-10.10.10.142 | csgo / cs2 match 2 | match2
-10.10.10.143 | csgo / cs2 match 3 | match3
-10.10.10.144 | csgo / cs2 match 4 | match4
-10.10.10.145 | csgo / cs2 match 5 | match5
-10.10.10.146 | csgo / cs2 match 6 | match6
-10.10.10.147 | csgo / cs2 match 7 | match7
-10.10.10.148 | csgo / cs2 match 8 | match8
-10.10.10.149 | csgo / cs2 match 9 | match9
-10.10.10.150 | csgo / cs2 match 10 | match10
-10.10.10.151 | csgo / cs2 match 11 | match11
-10.10.10.152 | csgo / cs2 match 12 | match12
-
+10.10.10.141 | cs2 match pro 1
+10.10.10.142 | cs2 match pro 2
+10.10.10.143 | cs2 match pro 3
+10.10.10.144 | cs2 match pro 4
+10.10.10.145 | cs2 match pro 5
+10.10.10.146 | cs2 match pro 6
+10.10.10.147 | cs2 match pro 7
+10.10.10.148 | cs2 match pro 8
+10.10.10.149 | cs2 match pro 9
+10.10.10.150 | cs2 match pro 10
+10.10.10.151 | cs2 match casual 1
+10.10.10.152 | cs2 match casual 2
+10.10.10.153 | cs2 match casual 3
+10.10.10.154 | cs2 match casual 4
+10.10.10.155 | cs2 match casual 5
+10.10.10.156 | 
+10.10.10.157 | 
+10.10.10.158 | 
+10.10.10.159 | 
+10.10.10.160 | live
+10.10.10.161 | click
 
 ### CPU Pinning Assignments
 To help a bit with performance, we'll pin containers to specific core(s) and/or ranges. The following maps out those assignments:
 Core # | Container / Server | Notes
 ------ | ------------------ | -----
-TODO
+0 | CStrike SnowSk337
+1 | L4D2
+2 | Live
+3 | TF2 Casual
+4 | TF2 MvM
+5 | Satisfactory
+6 | UT2004
+7-11 | Rust
+12 | Minecraft
+13 | Garrys Mod
+14 | CS2 Casual 1
+15 | CS2 Casual 2
+16 | CS2 Scrim 1
+17 | CS2 Scrim 2
+18 | CS2 Match Pro 1
+19 | CS2 Match Pro 2
+20 | CS2 Match Pro 3
+21 | CS2 Match Pro 4
+22 | CS2 Match Pro 5
+23 | CS2 Match Pro 6
+24 | CS2 Match Pro 7
+25 | CS2 Match Pro 8
+26 | CS2 Match Pro 9
+27 | CS2 Match Pro 10
+28 | CS2 Match Casual 1
+29 | CS2 Match Casual 2
+30 | CS2 Match Casual 3
+31 | CS2 Match Casual 4
+33 | CS2 Match Casual 5
 
 
 As we add more to this list, we'll keep this updated so it's easy to see at a high level view.

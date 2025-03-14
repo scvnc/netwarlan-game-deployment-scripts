@@ -30,6 +30,7 @@ services:
     networks:
       vlan:
         ipv4_address: 10.10.10.127
+    cpuset: "7-11"
 
 networks:
   vlan:

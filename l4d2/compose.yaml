@@ -2,8 +2,11 @@ services:
   l4d2:
     image: ghcr.io/netwarlan/l4d2
     environment:
+      STEAMCMD_USER: ${STEAMCMD_USER}
+      STEAMCMD_PASSWORD: ${STEAMCMD_PASSWORD}
+      STEAMCMD_AUTH_CODE: ${STEAMCMD_AUTH_CODE}
       L4D2_SERVER_HOSTNAME: "NETWAR L4D2"
-      L4D2_SERVER_UPDATE_ON_START: false
+      L4D2_SERVER_UPDATE_ON_START: true
     volumes:
       - ./data:/app/l4d2
     restart: "unless-stopped"
@@ -13,7 +16,8 @@ services:
         max-file: "3"
     networks:
       vlan:
-        ipv4_address: 10.10.10.128
+        ipv4_address: 10.10.10.126
+    cpuset: "1"
 
 networks:
   vlan:
