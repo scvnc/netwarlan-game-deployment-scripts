@@ -93,7 +93,7 @@ Should be mostly self explanatory expecially with their UI and [docs](https://um
     /kit
     /kit new
 
-It looks like kits are built by copying your inventory.  Using the give command to give yourself any item may be useful for building kits.
+It looks like kits are built by copying your inventory.  Using the [command to give yourself any item](https://github.com/scvnc/netwarlan-game-deployment-scripts/blob/main/rust/admin_notes.md#spawning-items-to-inventory) may be useful for building kits.
 
 ## Gather
 We can see if the gather mod is working and check its params with 
