@@ -32,9 +32,9 @@ I know I am admin because I can invoke `server.writecfg` and it reports that the
 Download (wget/curl) these mods to the `data/oxide/plugins/` folder
 
 ```
-https://umod.org/plugins/ZoneManager.cs
-https://umod.org/plugins/Kits.cs
-https://umod.org/plugins/ZoneDomes.cs
+curl -sL https://umod.org/plugins/ZoneManager.cs -o ZoneManager.cs
+curl -sL https://umod.org/plugins/ZoneDomes.cs -o ZoneDomes.cs
+curl -sL https://umod.org/plugins/Kits.cs -o Kits.cs
 ```
 
 The server will detect the files, compile, and launch each mod while it is runnning.
