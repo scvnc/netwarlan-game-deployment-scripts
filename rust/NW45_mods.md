@@ -87,11 +87,13 @@ a nice UI "shop" that allows the player to get a set of items (with optional coo
 
 ### Launch the kits ui
 
-Should be mostly self explanatory expecially with their UI and docs.
+Should be mostly self explanatory expecially with their UI and [docs](https://umod.org/plugins/rust-kits). 
 
 
     /kit
     /kit new
+
+It looks like kits are built by copying your inventory.  Using the give command to give yourself any item may be useful for building kits.
 
 ## Gather
 We can see if the gather mod is working and check its params with 
