@@ -41,7 +41,7 @@ curl -sL https://umod.org/plugins/Kits.cs -o Kits.cs
 
 The server will detect the files, compile, and launch each mod while it is runnning.
 
-### Create a PvE zone on the map
+#### Create a PvE zone on the map
 
 Perhaps, after some exploring, we should find a nice place on the map where player and building damage is disabled.
 
@@ -64,7 +64,7 @@ Set the name and notifications of the zone
     /zone enter_message "Welcome to NETWAR town! You are safe from player damage and raiding."
     /zone leave_message "You are leaving NETWAR town"
 
-### Create a visual border around the PvE zone we just created
+#### Create a visual border around the PvE zone we just created
 
 Now that you've set up the zone, you can make a visual border around it.
 
@@ -75,17 +75,17 @@ Now that you have the zone id, make a green border around the zone. (3 is for gr
     /zd add zone_id 3
 
 
-## Setting up kits
+### Setting up kits
 
 At some point in the lifecycle of the event, we may want to offer some kits so that new 
 players don't have to grind for a weapon or tools. Maybe something basic. This mod provides 
 a nice UI "shop" that allows the player to get a set of items (with optional cooldown.)
 
-### Grant permission to admin the kits mod
+#### Grant permission to admin the kits mod
 
 `oxide.grant user _drone kits.admin`
 
-### Launch the kits ui
+#### Launch the kits ui
 
 Should be mostly self explanatory expecially with their UI and [docs](https://umod.org/plugins/rust-kits). 
 
@@ -95,12 +95,12 @@ Should be mostly self explanatory expecially with their UI and [docs](https://um
 
 It looks like kits are built by copying your inventory.  Using the [command to give yourself any item](https://github.com/scvnc/netwarlan-game-deployment-scripts/blob/main/rust/admin_notes.md#spawning-items-to-inventory) may be useful for building kits.
 
-## Gather
+### Gather
 We can see if the gather mod is working and check its params with 
 
     /gather
 
-## Plants
+### Plants
 
 Perhaps at some point later during the lan, increasing the rate at which plants grow would be useful.
 I read adjusting the tick scale is a good idea to do this.  Example making it 2x:
