@@ -1,6 +1,6 @@
 services:
   rust:
-    image: ghcr.io/netwarlan/rust
+    build: ./docker-image
     volumes:
       - ./data:/app/rust
     restart: "unless-stopped"
